@@ -17,7 +17,7 @@ const exitTheProcess = () => {
 
 rl.output.write("Hi there! Please type something ...\n");
 rl.on("line", (data) => {
-  if (data.trim() === "exit") exitTheProcess();
+  if (data.trim().toLowerCase() === "exit") exitTheProcess();
 
   fs.appendFile(path.join(__dirname, "text.txt"), `${data} `, function (error) {
     if (error) throw error;
