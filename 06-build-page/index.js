@@ -2,6 +2,10 @@ const fs = require("fs");
 const path = require("path");
 
 async function startModuleBuilder() {
+  await fs.promises.rm(path.join(__dirname, "project-dist"), {
+    recursive: true,
+  });
+
   await fs.promises.mkdir(path.join(__dirname, "project-dist"), {
     recursive: true,
   });
