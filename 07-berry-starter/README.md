@@ -39,7 +39,7 @@ PS C:\Users\HTML-builder>
 
 </details>
 
-## модули в JavaScript
+## [модули в JavaScript →](./demo-es-modules/)
 
 - повторное использование
 - возможность компоновки
@@ -169,7 +169,7 @@ for (const user of users) {
 | Нет асинхронности            | Асинхронные подключения       |
 | Поддержка                    | TypeScript                    |
 
-## Как использовать ES Modules в NodeJS
+## [Как использовать ES Modules в NodeJS →](./demo-common-js/)
 
 - Использовать js файлы расширения .mjs
 - Указывать в package.json `"type": "module"`
@@ -262,3 +262,17 @@ export default function log() {
   console.log("log");
 }
 ```
+
+## [Глобальные и модульные переменные →](./demo-3/)
+
+| Глобальные      |                 |                | Модульные    |
+| --------------- | --------------- | -------------- | ------------ |
+| global          | setTimeout      | MessageChannel |              |
+| console         | setInterval     | MessageEvent   | \_\_dirname  |
+| perfomance      | setImmediate    | MessagePort    | \_\_filename |
+| Buffer          | clearTimeout    |                | exports      |
+| AbortController | clearInterval   | Event          | module       |
+| queueMicrotask  | clearImmediate  | EventTarget    | require()    |
+| WebAssembly     |                 |                |              |
+|                 | URL             | TextDecor      |              |
+|                 | URLSearchParams | TextEncoder    |              |
