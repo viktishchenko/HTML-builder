@@ -21,7 +21,7 @@ CLI - command-line interface
 
 По сути дает возможность тестировать ноду:
 
-```
+```javascript
 PS C:\Users\HTML-builder> node
 Welcome to Node.js v16.13.2.
 Type ".help" for more information.
@@ -60,7 +60,7 @@ IIFE
 </summary>
 Immediately Invoked Function Expression - IIFE
 
-```
+```javascript
 (function () {
   const users = ["Антон", "Вася"];
 
@@ -75,7 +75,7 @@ Immediately Invoked Function Expression - IIFE
 
 file `index.html`
 
-```
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,22 +102,20 @@ Common JS
 
 file `users.js`
 
-```
-
+```javascript
 const users = ["Антон", "Вася"];
 
 function greet(name) {
-console.log(`Привет ${name}`);
+  console.log(`Привет ${name}`);
 }
 
 // что экспортирует модуль
-module.exports = {users, greet};
-
+module.exports = { users, greet };
 ```
 
 file `app.js`
 
-```
+```javascript
 // ключевое слово подключения - `require`
 
 const {greet, users} = require(./users.js);
@@ -137,28 +135,26 @@ ES Modules
 
 file `users.mjs`
 
-```
+```javascript
 // что экспортирует модуль
 
 export const users = ["Антон", "Вася"];
 
 export function greet(name) {
-console.log(`Привет ${name}`);
+  console.log(`Привет ${name}`);
 }
-
 ```
 
 file `app.mjs`
 
-```
+```javascript
 // ключевое слово подключения - `import`
 
-import {greet, users} from './users.mjs';
+import { greet, users } from "./users.mjs";
 
 for (const user of users) {
-    greet(user);
+  greet(user);
 }
-
 ```
 
 </details>
@@ -178,3 +174,91 @@ for (const user of users) {
 - Использовать js файлы расширения .mjs
 - Указывать в package.json `"type": "module"`
 - Передать node аргумент `--input-type=module*`
+
+## Common JS синтаксис
+
+` app.js`
+
+```javascript
+const a = 0;
+if (a > 0) {
+  const log = require("./characters");
+  log();
+  /**
+   * Загружено characters.js
+   * log
+   */
+} else {
+  console.log("Меньше 0"); // Меньше 0 !!!
+}
+```
+
+` characters.js`
+
+```javascript
+console.log("Загружено characters.js");
+
+// module.exports = { characters, stealRings };
+module.exports = function log() {
+  console.log("log");
+};
+```
+
+## ES Modules синтаксис
+
+` app.mjs`
+
+```javascript
+// import { characters, greet } from "./characters.mjs";
+// import char, { characters, greet as hello } from "./characters.mjs";
+
+// import { characters } from "./characters.mjs";
+
+// for (const c of characters) {
+//   hello(c);
+// }
+// for (const c of char.characters) {
+//   char.greet(c);
+// }
+// char(); // log
+
+/**
+ * Поздравляю: Фродо
+ * Поздравляю: Бильбо
+ */
+
+// асинхронный динамический импорт модулей
+async function main() {
+  try {
+    const { characters, greet } = await import("./charactersХУЭКС.mjs");
+    for (const c of characters) {
+      greet(c);
+    }
+  } catch (error) {
+    console.log("Ошибка"); // Ошибка
+  }
+}
+// async function main() {
+//   const { characters, greet } = await import("./characters.mjs");
+//   for (const c of characters) {
+//     greet(c);
+//   }
+// }
+
+main();
+```
+
+` characters.mjs`
+
+```javascript
+export const characters = ["Фродо", "Бильбо"];
+
+export function greet(character) {
+  console.log("Поздравляю: " + character);
+}
+
+// default export
+export default function log() {
+  console.log("log");
+}
+```

@@ -2,7 +2,7 @@
 
 // переходим в папку с `demo`, смотрим содержимое командой `ls`
 
-```
+```javascript
 PS C:\Users\07-berry-starter\demo> ls
 
 
@@ -21,7 +21,7 @@ PS C:\Users\07-berry-starter\demo>
 
 выполняем код командой: `node app.js`
 
-```
+```javascript
 fs = require("fs");
 
 // синхронный блокирует поток!!!
