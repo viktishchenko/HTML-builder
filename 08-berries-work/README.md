@@ -617,3 +617,123 @@ PerformanceMeasure {
 ```
 
 </details>
+
+<details>
+<summary>
+spawn & exec & fork
+</summary>
+
+### [exec →](./spawn_exec/app.js)
+
+```javascript
+// Запуск параллельных процессов
+
+const { exec } = require("child_process");
+
+const childProcess = exec("dir", (err, stdout, stderr) => {
+  if (err) {
+    console.log(err.message);
+  }
+  console.log(`stdout: ${stdout}`);
+  console.log(`stderr: ${stderr}`);
+});
+
+childProcess.on("exit", (code) => {
+  console.log(`Код выхода: ${code}`);
+});
+
+/* 
+Кодировка в консоли: chcp
+Варианты: 866 (русский в DOS) | 1251 (Windows-1251) | 65001 (UTF-8)
+Например: chcp 65001
+
+Код выхода: 0
+stdout:  Volume in drive C has no label.
+ Volume Serial Number is ...
+
+ Directory of C:\Users\...\spawn_exec
+
+07.04.2022  10:45    <DIR>          .
+07.04.2022  10:45    <DIR>          ..
+07.04.2022  10:33               429 app.js
+07.04.2022  10:45                30 example1.js
+07.04.2022  10:45                31 example2.js
+               3 File(s)            490 bytes
+               2 Dir(s)  526 686 638 080 bytes free
+
+stderr:
+
+*/
+```
+
+### [app-spawn →](./spawn_exec/app-spawn.js)
+
+```javascript
+// Запуск параллельных процессов
+
+const { spawn } = require("child_process");
+
+const childProcess = spawn("ls");
+
+// console.log("childProcess :>> ", childProcess);
+
+childProcess.stdout.on("data", (data) => {
+  console.log(`Stdout: ${data}`);
+});
+
+childProcess.stderr.on("data", (data) => {
+  console.log(`Stderr: ${data}`);
+});
+
+childProcess.on("exit", (code) => {
+  console.log(`Код выхода: ${code}`);
+});
+
+// Не работает → выход с ошибкой
+```
+
+### [app-fork →](./spawn_exec/app-fork.js)
+
+`app-fork.js`
+
+```javascript
+// Запуск параллельных процессов
+
+const { fork } = require("child_process");
+
+const forkProcess = fork("./fork.js");
+
+forkProcess.on("message", (msg) => {
+  console.log(`Получено сообщение: ${msg}`);
+});
+
+forkProcess.on("close", (code) => {
+  console.log(`Exited: ${code}`);
+});
+
+forkProcess.send("Ping");
+forkProcess.send("disconnect");
+```
+
+`fork.js`
+
+```javascript
+process.on("message", (msg) => {
+  if (msg === "disconnect") {
+    process.disconnect();
+    return;
+  }
+  console.log(`Клиент получил: ${msg}`);
+  process.send("Pong!");
+});
+
+/* 
+
+Клиент получил: Ping
+Получено сообщение: Pong!
+Exited: 0
+
+*/
+```
+
+</details>
