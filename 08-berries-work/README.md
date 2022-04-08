@@ -820,3 +820,65 @@ fork: 13684.067000001669
 ### conclusion: use worker (╯°□°）╯︵ ┻━┻
 
 </details>
+
+<details>
+<summary>
+v8
+</summary>
+
+![v8](./assets/v8.jpg)
+
+![abstract syntax tree](./assets/ast.jpg)
+
+![bytecode](./assets/bytecode.jpg)
+
+![compiler](./assets/compiler.jpg)
+
+![broke optimisation](./assets/broke_optimisation.jpg)
+
+![how optimize](./assets/how_optimize.jpg)
+
+![garbage](./assets/garbage.jpg)
+
+![how clean](./assets/how_clean.jpg)
+
+![may clean](./assets/may_clean.jpg)
+
+![may not clean](./assets/may_not_clean.jpg)
+
+![can clean](./assets/can_clean.jpg)
+
+![tri color mark](./assets/tri_color_mark.jpg)
+
+![tri color mark how](./assets/tri_color_mark_how.jpg)
+
+![memory](./assets/memory.jpg)
+
+![stop copy](./assets/stop_copy.jpg)
+
+![is stop](./assets/is_stop.jpg)
+
+![v8 plus](./assets/v8_plus.jpg)
+
+![v8 plus how](./assets/v8_plus_how.jpg)
+
+![clinic doctor](./assets/clinic_doctor.jpg)
+
+```javascript
+let outer = null;
+let run = function () {
+  let inner = outer;
+  let unused = function () {
+    if (inner) {
+      console.log("hi");
+    }
+  };
+  outer = {
+    longStr: new Array(1000000).join("*"),
+  };
+};
+
+setInterval(run, 1000);
+```
+
+</details>
