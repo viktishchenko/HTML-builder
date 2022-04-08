@@ -2,7 +2,7 @@
  * Измеряем производительность
  */
 
-/* function slow() {
+function slow() {
   // mark start
   performance.mark("start");
   const arr = [];
@@ -16,7 +16,7 @@
   console.log(performance.getEntriesByName("slowpok"));
 }
 
-slow(); */
+slow();
 
 /* 
 [
