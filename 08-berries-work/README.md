@@ -882,3 +882,49 @@ setInterval(run, 1000);
 ```
 
 </details>
+
+<details>
+<summary>
+npm
+</summary>
+
+Npm update:
+
+```javascript
+
+// Обновляем npm
+npm i -g npm
+
+// Логинимся в npm
+npm login
+Username:
+Password:
+Email:
+
+// Проверяем что залогинились
+npm whoami
+
+// Посмотреть профайл
+npm profile get
+
+// Изменить из консоли
+npm profile set fullname "Vasya Pupkin"
+npm profile get // Вуаля
+
+// Создать новую команду, добавить пользователя и пр.
+npm team <параметры>
+
+// Выходим
+npm logout
+
+```
+
+### npm starter
+
+```javascript
+
+// Создаем package.json
+npm init
+```
+
+</details>

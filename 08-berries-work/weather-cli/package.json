@@ -1,0 +1,35 @@
+{
+  "name": "test-weather-cli",
+  "version": "1.0.0",
+  "description": "Getting weather CLI",
+  "main": "index.js",
+  "bin": "./index.js",
+  "os": [
+    "!macOS"
+  ],
+  "man": [
+    "./manual/README.md"
+  ],
+  "engines": {
+    "node": ">14"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "cli"
+  ],
+  "author": "Vasya Pupkin",
+  "license": "ISC",
+  "homepage": "https://google.com/example",
+  "repository": {
+    "type": "git",
+    "url": "https://google.com/example"
+  },
+  "bugs": {
+    "url": "https://google.com/example",
+    "email": "public@mail.com"
+  }
+}
