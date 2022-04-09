@@ -2,19 +2,13 @@
   "name": "test-weather-cli",
   "version": "1.0.0",
   "description": "Getting weather CLI",
-  "main": "index.js",
-  "bin": "./index.js",
-  "os": [
-    "!macOS"
-  ],
-  "man": [
-    "./manual/README.md"
-  ],
-  "engines": {
-    "node": ">14"
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
   },
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node weather.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -31,5 +25,8 @@
   "bugs": {
     "url": "https://google.com/example",
     "email": "public@mail.com"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
   }
 }
