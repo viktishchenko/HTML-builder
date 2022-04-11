@@ -928,3 +928,50 @@ npm init
 ```
 
 </details>
+
+<details>
+<summary>
+weather-cli-app
+</summary>
+
+# консольное приложение weather-cli-app
+
+- сохранение настроек (`api-key` & `city`) на стороне клиента в корневом каталоге
+
+```javascript
+
+PS C:\Users\...\weather-cli> node weather.js
+PS C:\Users\...\weather-cli> npm start -- -s omsk
+// npx - добавляет в кеш но не в качестве экзекьютера,
+// т.е. пакет выполняется без установки ...
+PS C:\Users\...\weather-cli> npx weather-cli-demo
+PS C:\Users\...\weather-cli> npx weather-cli-demo -s tomsk
+// or
+// тоже что npx, т.е. исполняется из кеша, но с '--'
+PS C:\Users\...\weather-cli> npm exec weather-cli-demo -- -s tomsk
+
+
+WEATHER
+    Погода в городе Омск
+    ☀️  Ясно
+    Температура: 7.7 ощущается как 4.7
+    Влажность: 26 %
+    Скорость ветра: 5 м/с
+
+```
+
+## публикация на npmjs
+
+### логинимся
+
+```javascript
+npm whoami // чекаем
+npm publish // публикуем
+npm i -g weather-cli-demo
+weather
+// or
+weather -t // токен
+weather -s // город
+```
+
+</details>
