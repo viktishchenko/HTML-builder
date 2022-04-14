@@ -33,11 +33,11 @@ const app = express();
     secure: true,
   });
   //   res.clearCookie("name", { path: "/admin" });
-  res.clearCookie();
+  res.clearCookie("name");
   res.send("Привет3!");
 }); */
 
-// end
+// end - обязательно что-либо отвечать, например res.end()
 app.get("/hello", (req, res) => {
   //   res.send("Привет!");
   // бесконечный запрос
