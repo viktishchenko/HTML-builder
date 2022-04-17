@@ -14,4 +14,7 @@
 
 - [plusTs →](./plusTs/index.ts)
 
-- [typeScript basic](./plusTs/test.ts) or [another example →](./plusTs/index.ts)
+- [typeScript basic →](./plusTs/index.ts)
+  - [type & interface →](./plusTs/ts-basic/test_type%26interface.ts)
+  - [literal →](./plusTs/ts-basic/test_literal.ts)
+  - [enam →](./plusTs/ts-basic/test_enum.ts)
