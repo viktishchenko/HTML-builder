@@ -18,3 +18,4 @@
   - [type & interface →](./plusTs/ts-basic/test_type%26interface.ts)
   - [literal →](./plusTs/ts-basic/test_literal.ts)
   - [enam →](./plusTs/ts-basic/test_enum.ts)
+  - [generics →](./plusTs/ts-basic/test_generics.ts)
