@@ -13,3 +13,5 @@
 - [middleware →](./middleware/index.js)
 
 - [plusTs →](./plusTs/index.ts)
+
+- [typeScript basic](./plusTs/test.ts) or [another example →](./plusTs/index.ts)
