@@ -15,8 +15,9 @@
 - [plusTs →](./plusTs/index.ts)
 
 - [typeScript basic →](./plusTs/index.ts)
-  - [type & interface →](./plusTs/ts-basic/test_type%26interface.ts)
+  - [type & interface →](./plusTs/ts-basic/test_type_interface.ts)
   - [literal →](./plusTs/ts-basic/test_literal.ts)
   - [enam →](./plusTs/ts-basic/test_enum.ts)
   - [generics →](./plusTs/ts-basic/test_generics.ts)
   - [classes→](./plusTs/ts-basic/test_classes.ts)
+  - [other-stuff→](./plusTs/ts-basic/test_other.ts)
