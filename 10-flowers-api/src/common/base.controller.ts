@@ -19,7 +19,7 @@ export abstract class BaseController {
    */
   public send<T>(res: Response, code: number, message: T) {
     res.type("application/json");
-    return res.status(200).json(message);
+    return res.status(code).json(message);
   }
 
   /**
