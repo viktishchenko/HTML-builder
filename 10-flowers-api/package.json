@@ -12,7 +12,8 @@
   "author": "vvt",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "tslog": "^3.3.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.13"
