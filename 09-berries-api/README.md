@@ -37,6 +37,17 @@ decorators
 
 ![decorators what is →](./plusTs/ts-basic/images/what_is_decorators.jpg)
 
-[Подробности →](../10-flowers-api/src/test.ts)
+[Подробности →](./plusTs/ts-basic/test.ts)
+
+</details>
+
+<details>
+<summary>
+metadata reflection
+</summary>
+
+![metadata reflection →](./plusTs/ts-basic/images/metadata_reflection.jpg)
+
+[Подробности →](./plusTs/ts-basic/test2.ts)
 
 </details>
