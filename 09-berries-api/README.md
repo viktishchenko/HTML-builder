@@ -21,3 +21,22 @@
   - [generics →](./plusTs/ts-basic/test_generics.ts)
   - [classes→](./plusTs/ts-basic/test_classes.ts)
   - [other-stuff→](./plusTs/ts-basic/test_other.ts)
+
+<details>
+<summary>
+decorators
+</summary>
+
+![decorators →](./plusTs/ts-basic/images/decorators.jpg)
+
+![move meta →](./plusTs/ts-basic/images/move_meta.jpg)
+
+![decorators type →](./plusTs/ts-basic/images/deco_types.jpg)
+
+![decorators order of execution →](./plusTs/ts-basic/images/deco_order_exec.jpg)
+
+![decorators what is →](./plusTs/ts-basic/images/what_is_decorators.jpg)
+
+[Подробности →](../10-flowers-api/src/test.ts)
+
+</details>
