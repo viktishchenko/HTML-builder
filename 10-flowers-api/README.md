@@ -44,3 +44,28 @@ npm i -D @types/express
 ```
 
 </details>
+
+<details>
+<summary>
+dep injection
+</summary>
+
+![dependency injection](./assets/dep_injection.jpg)
+
+![simple DI](./assets/simple_DI.jpg)
+
+![composition root](./assets/composition_root.jpg)
+
+![simple DI plus](./assets/simple_DI_plus.jpg)
+
+![simple DI with TypeScript](./assets/simple_DI_with_TS.jpg)
+
+![inversion control](./assets/inversion-control.jpg)
+
+![ic detailes](./assets/ic_details.jpg)
+
+![inversion of control und di](./assets/di_with_inversionOfControl.jpg)
+
+![service locator](./assets/service_locator.jpg)
+
+</details>
